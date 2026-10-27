@@ -65,7 +65,7 @@ var CONFIG = {
   else if (CONFIG.type === "vimeo" && CONFIG.source)
     h = '<iframe src="https://player.vimeo.com/video/' + encodeURIComponent(CONFIG.source) + '" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Video"></iframe>';
   else if (CONFIG.type === "mp4" && CONFIG.source)
-    h = '<video controls playsinline preload="metadata" src="' + CONFIG.source.replace(/"/g, "&quot;") + '"></video>';
+    h = '<video controls loop muted autoplay playsinline preload="auto" src="' + CONFIG.source.replace(/"/g, "&quot;") + '"></video>';
   else
     h = '<div class="empty">Your video will appear here</div>';
   p.innerHTML = h;
